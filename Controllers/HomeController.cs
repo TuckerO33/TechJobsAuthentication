@@ -29,6 +29,7 @@ namespace TechJobsAuthentication.Controllers
 
             return View(addJobViewModel);
         }
+        
 
 
         public IActionResult ProcessAddJobForm(AddJobViewModel addJobViewModel)

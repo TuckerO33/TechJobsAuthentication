@@ -2,10 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using TechJobsAuthentication.Models;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace TechJobsAuthentication.Data
 {
-    public class JobDbContext : DbContext
+    public class JobDbContext : IdentityDbContext<IdentityUser, IdentityRole, string>
     {
         public DbSet<Job> Jobs { get; set; }
 
